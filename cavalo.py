@@ -4,8 +4,8 @@ tabuleiro = [[],[],[],[],[],[],[],[]]
 
 
 def cria_tabuleiro():
-    for i in range(8):
-        for j in range(8):
+    for i in range(len(lin)):
+        for j in range(len(col)):
             tabuleiro[i].append(col[j]+lin[i])
     return tabuleiro
 
@@ -19,26 +19,32 @@ def movimentar(pos):
         try:
             nova_pos = tabuleiro[abs(index_linha + mov[i][0])][abs(index_colun + mov[i][1])]
             resp.append(nova_pos)
-        except:
+        except IndexError:
             break
     for i in range(4):
         try:
             nova_pos = tabuleiro[abs(index_linha+(-mov[i][0]))][abs(index_colun+(-mov[i][1]))]
             resp.append(nova_pos)
-        except Exception:
+        except IndexError:
             break
         
     return resp
 
 def main():
-    cria_tabuleiro()
-    posicao = input(" ")
-    while posicao[0] not in col and posicao[1] not in lin:
-        print("input invalido!")
-        posicao = input(" ")
+    while True:
+        posicao = input("posicao: ")
         if posicao == 'f':
-            print("saindo...")
+            print('Saindo...')
             exit()
+        elif len(posicao) != 2:
+            print('input inválido')
+        elif posicao[0] not in col or posicao[1] not in lin:
+            print('input inválido')
+        else:
+            break
+    
+    tabuleiro = cria_tabuleiro()
+    
     lista = movimentar(posicao)
     
     resposta = list(set(lista))
