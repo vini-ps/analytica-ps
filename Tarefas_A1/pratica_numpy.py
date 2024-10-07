@@ -1,14 +1,14 @@
 import numpy as np
 import math
 
-lista = [5.5, 3.8, 9, 7.5, 10.0, 9.9, 8.5]
+lista = np.array([5.5, 3.8, 9, 7.5, 10.0, 9.9, 8.5])
 
 
 ########4
 ##(a)
 def  media(lista):
     soma = 0
-    for i range(len(lista)):
+    for i in range(len(lista)):
         soma += lista[i]
     media = soma/len(lista)
     return media
@@ -24,11 +24,11 @@ def desvio_padrao(lista):
 
 ########5
 ##(a)
-lista_ordenada = lista1.sort()
+lista_ordenada = lista.sort()
 print(lista_ordenada)
 
 ##(b)
-lista.shape
+print(lista.shape)
 
 ##(c)
 print(lista.mean())
@@ -37,5 +37,3 @@ print(lista.mean())
 desvio_pd = lista.std()
 maximo = lista.max()
 minimo = lista.min()
-
-##(e)
