@@ -4,7 +4,7 @@ import pandas as pd
 ####1
 df = pd.read_csv("dataset.csv")
 
-####2.
+####2
 print(df.to_string())
 
 ####3
