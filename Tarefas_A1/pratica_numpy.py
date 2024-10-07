@@ -13,21 +13,27 @@ def  media(lista):
         soma += lista[i]
     media = soma/len(lista)
     return media
+
+media = media(lista)
+print(f'media usando iteracao = {media}')
+
 ##(b)
 def desvio_padrao(lista):
-    media = media(lista)
     somatorio = 0
     for i in range(len(lista)):
         potencia = math.pow(lista[i] - media,2)
-        soma += potencia
-    razao = soma/len(lista)
+        somatorio += potencia
+    razao = somatorio/len(lista)
     desvio_padrao = math.sqrt(razao)
     return desvio_padrao
 
+desvio_padrao = desvio_padrao(lista)
+print(f'desvio padrao usando iteracao = {desvio_padrao}')
+
 ########5
 ##(a)
-lista_ordenada = lista.sort()
-print(lista_ordenada)
+lista.sort()
+print(lista)
 
 ##(b)
 print(lista.shape)
@@ -36,9 +42,10 @@ print(lista.shape)
 print(lista.mean())
 
 ##(d)
-desvio_pd = lista.std()
-maximo = lista.max()
-minimo = lista.min()
+print('desvio padrao, maximo e minimo com metodos: ')
+print(lista.std())
+print(lista.max())
+print(lista.min())
 
 ##(e)
 array_aleatorio = random.randint(11,size=(100))
