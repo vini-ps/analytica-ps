@@ -21,6 +21,7 @@ def desvio_padrao(lista):
         soma += potencia
     razao = soma/len(lista)
     desvio_padrao = math.sqrt(razao)
+    return desvio_padrao
 
 ########5
 ##(a)
