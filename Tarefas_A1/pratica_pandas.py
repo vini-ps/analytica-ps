@@ -1,4 +1,4 @@
-import pandas as pd # type: ignore
+import pandas as pd
 
 ####1
 df = pd.read_csv("dataset.csv")
