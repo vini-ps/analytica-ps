@@ -9,6 +9,9 @@ def populacao_urbanaBR():
 
     plt.bar(x,porcentagem)
     plt.show()
+    print('Proporcao da Populacao Urbana entre os estados brasileiros para o ano de 1991:\n')
+    for i in range(len(y)):
+        print(f'{x[i]} = {porcentagem[i]*100:.2f}% do Brasil')
     return 
 
 
@@ -25,6 +28,11 @@ def desigualdade_brasil():
 
     plt.hist([ano91,ano00,ano10], color = ('red','green','blue'), width = 0.015)
     plt.show()
+
+    print(f"desvio padrao de 1991, 2000, 2010 respectivamento:")
+    print(f"{ano91.std():.5f}, {ano00.std():.5f}, {ano10.std():.5f}")
+    print("A partir dos graficos e desvio padrao dos valores de idhm dos anos estudos, eh possivel perceber uma")
+    print("diminuicao da desigualdade do Brasil, considerando todo o período analisado")
     return 
 
 
@@ -35,3 +43,7 @@ def idh_vs_vida():
     plt.scatter(idhm,expectativa_vida)
 
     plt.show()
+    print("Sim, o grafico mostra que existe uma relacao diretamente proporcional entre as medidas")
+    return
+
+
