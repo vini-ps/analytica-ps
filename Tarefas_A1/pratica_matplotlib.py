@@ -27,5 +27,11 @@ def desigualdade_brasil():
     plt.show()
     return 
 
-def idh_expectVida():
-  pass
+
+def idh_vs_vida():
+    idhm = np.array(df['idhm'])
+    expectativa_vida = np.array(df['expectativa_vida'])
+    
+    plt.scatter(idhm,expectativa_vida)
+
+    plt.show()
