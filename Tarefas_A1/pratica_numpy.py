@@ -1,5 +1,5 @@
-from numpy import random # type: ignore
-import numpy as np # type: ignore
+from numpy import random
+import numpy as np
 import math
 
 lista = np.array([5.5, 3.8, 9, 7.5, 10.0, 9.9, 8.5])
