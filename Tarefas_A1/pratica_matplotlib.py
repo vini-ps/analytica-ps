@@ -1,5 +1,5 @@
-import matplotlib.pyplot as plt # type: ignore
-import numpy as np # type: ignore
+import matplotlib.pyplot as plt
+import numpy as np 
 from pratica_pandas import *
 
 def populacao_urbanaBR():
