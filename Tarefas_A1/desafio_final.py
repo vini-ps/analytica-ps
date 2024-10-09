@@ -10,15 +10,11 @@ def aumento_expectatita_vida():
     expect_vida1991 = np.array(filtro_1991['expectativa_vida'])
     expect_vida2010 = np.array(filtro_2010['expectativa_vida'])
 
-    #print(expect_vida1991)
-    #print(expect_vida2010)
-
     diferenca_expect_vida = np.array([])
     for i in range(len(expect_vida1991)):
         diferenca = round(expect_vida2010[i] - expect_vida1991[i],2) 
         diferenca_expect_vida = np.append(diferenca_expect_vida, diferenca)
     
-    #print(diferenca_expect_vida)
     estados = np.array(filtro_siglauf)
 
     plt.bar(estados, diferenca_expect_vida)
@@ -31,7 +27,7 @@ def aumento_expectatita_vida():
     
     print(resposta)
 
-    return resposta
+    return
 
 
 aumento_expectatita_vida()
