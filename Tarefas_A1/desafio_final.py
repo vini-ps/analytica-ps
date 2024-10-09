@@ -24,10 +24,8 @@ def aumento_expectatita_vida():
     for i in range(len(diferenca_expect_vida)):
         if diferenca_expect_vida[i] >= 10:
             resposta.append(estados[i])
-    
-    print(resposta)
 
-    return
+    return resposta
 
 
 aumento_expectatita_vida()
