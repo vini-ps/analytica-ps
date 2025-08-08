@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pratica_pandas import *
 
-def aumento_expectatita_vida():
+def aumento_expectativa_vida():
     filtro_1991 = df[df['ano']==1991]
     filtro_2010 = df[df['ano']==2010]
 
@@ -28,4 +28,5 @@ def aumento_expectatita_vida():
     return resposta
 
 
-aumento_expectatita_vida()
+if __name__ == "__main__":
+    aumento_expectativa_vida()
